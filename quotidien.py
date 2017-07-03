@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 import redis
 import datetime
 import os
@@ -19,6 +19,10 @@ def register():
 
     r.set((name, date), useragent)
     return render_template('done.html')
+
+@app.route('/css/<path:path>')
+def send_static(path):
+    return send_from_directory('static', path)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

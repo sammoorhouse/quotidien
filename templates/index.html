@@ -1,7 +1,35 @@
 <html>
+        <head>
+        <link rel="stylesheet" media="all" href="/static/css/reg.css"></link>
+        </head>
     <body>
-        <form action="/reg" method="POST">
-            <input name="name" type=text>Name</input>
-        </form>
+
+<div class="form">
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>Daily sign-in</h1>
+          
+          <form action="/" method="post">
+
+          <div class="field-wrap">
+            <label>
+              Name<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" name="name"/>
+          </div>
+          
+          
+          <button type="submit" class="button button-block"/>Sign In</button>
+          
+          </form>
+
+        </div>
+        
+
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+
     </body>
 </html>
