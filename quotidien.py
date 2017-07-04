@@ -16,7 +16,7 @@ def register():
     date = datetime.datetime.now()
 
     useragent = request.headers.get('User-Agent')
-    print "saving [" + name + " " + date + " " + useragent + "]"
+    print "saving [" + name + " " + date.strftime("%B %d, %Y") + " " + useragent + "]"
     r.set((name, date), useragent)
     return render_template('done.html')
 
